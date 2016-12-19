@@ -11,7 +11,7 @@ export default class Home extends Component {
       <div>
         Welcome to the homepage.
         {this.props.auth.loggedIn() ? <button onClick={this.onLogoutClick.bind(this)}>Log out</button> : null}
-        {this.props.auth.loggedIn() ? <img src={this.props.auth.getProfile().picture} /> : null}
+        {this.props.auth.loggedIn() ? <img style={{height: '100px'}} src={this.props.auth.getProfile().picture} /> : null}
         {this.props.children}
       </div>
     );
